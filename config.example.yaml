@@ -1,0 +1,18 @@
+# UHTF Configuration Example
+# Copy this file to ~/.uhtf/config.yaml
+
+# Output settings
+output_dir: reports
+report_format: html  # html, json, text
+
+# Logging settings  
+log_level: INFO  # DEBUG, INFO, WARNING, ERROR
+log_file: null   # or path to log file
+
+# Test settings
+default_timeout: 30.0
+retry_count: 3
+
+# Plugin settings
+plugin_dirs:
+  - plugins
