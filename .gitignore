@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.Python
+venv/
+*.egg-info/
+
+# Go
+*.exe
+*.test
+bin/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
