@@ -1,3 +1,8 @@
+[![CI](https://github.com/xfengyin/UHTF/actions/workflows/ci.yml/badge.svg)](https://github.com/xfengyin/UHTF/actions/workflows/ci.yml)
+[![Release](https://github.com/xfengyin/UHTF/actions/workflows/release.yml/badge.svg)](https://github.com/xfengyin/UHTF/actions/workflows/release.yml)
+[![CodeQL](https://github.com/xfengyin/UHTF/actions/workflows/codeql.yml/badge.svg)](https://github.com/xfengyin/UHTF/actions/workflows/codeql.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # Universal Hardware Test Framework (UHTF)
 
 ![Python](https://img.shields.io/badge/python-3.8%2B-blue)
