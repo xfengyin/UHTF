@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "uhtf"
+version = "0.1.0"
+description = "Universal Hardware Test Framework - 统一硬件测试框架"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "xfengyin", email = "xfengyin@users.noreply.github.com"}
+]
+maintainers = [
+    {name = "xfengyin", email = "xfengyin@users.noreply.github.com"}
+]
+keywords = ["hardware", "testing", "arduino", "raspberry-pi", "embedded"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Testing",
+    "Topic :: System :: Hardware",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "pyserial>=3.5",
+    "pytest>=6.2.0",
+    "click>=8.0.0",
+    "rich>=10.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.2.0",
+    "pytest-cov>=2.12.0",
+    "black>=21.0.0",
+    "flake8>=3.9.0",
+    "mypy>=0.910",
+]
+web = [
+    "flask>=2.0.0",
+    "dash>=2.0.0",
+    "plotly>=5.0.0",
+]
+rpi = [
+    "RPi.GPIO>=0.7.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/xfengyin/UHTF"
+Documentation = "https://github.com/xfengyin/UHTF#readme"
+Repository = "https://github.com/xfengyin/UHTF"
+Issues = "https://github.com/xfengyin/UHTF/issues"
+
+[project.scripts]
+uhtf = "uhtf.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src/python"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+addopts = "-v --cov=src/python/uhtf --cov-report=html --cov-report=term"
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310", "py311"]
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
